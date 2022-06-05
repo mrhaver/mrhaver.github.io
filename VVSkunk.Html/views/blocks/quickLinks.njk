@@ -1,0 +1,12 @@
+{%- from "partials.njk" import renderPartial -%}
+
+<section class="block">
+    <div class="container">
+        <div class="row">
+            {{ renderPartial('quickLink', { title: 'Item 1' }) }}
+            {{ renderPartial('quickLink', { title: 'Item 2' }) }}
+            {{ renderPartial('quickLink', { title: 'Item 3' }) }}
+            {{ renderPartial('quickLink', { title: 'Item 4' }) }}
+        </div>
+    </div>
+</section>
