@@ -1,0 +1,13 @@
+{%- from "partials.njk" import renderPartial -%}
+
+<section class="block">
+    <div class="container text-center">
+        <h1 class="pb-3">Laatste nieuws</h1>
+        <div class="row">
+            {{ renderPartial('articleCard', { title: 'Dit is een van de laatste nieuws items' }) }}
+            {{ renderPartial('articleCard', { title: 'Item 2' }) }}
+            {{ renderPartial('articleCard', { title: 'Item 3' }) }}
+        </div>
+        <button class="btn btn-primary mt-3">Meer nieuws</button>
+    </div>
+</section>
