@@ -1,8 +1,9 @@
 var express = require('express');
 var nunjucks = require('nunjucks');
+const path = require('path');
 
 var app = express();
-app.use(express.static('/public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Apply nunjucks and add custom filter and function (for example). 
 nunjucks.configure(['views/', 'views/pages', 'views/blocks', 'views/partials', 'macros'], { // set folders with templates
@@ -14,7 +15,7 @@ app.get('/', function (req, res) {
     res.render('index.njk');
 });
 
-app.get('/:viewName', function (req, res) {
+app.get('/pages/:viewName', function (req, res) {
     let viewName = req.params.viewName;
 
     res.render(viewName + '.njk');
