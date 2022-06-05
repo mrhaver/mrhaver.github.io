@@ -1,3 +1,6 @@
+{%- from "partials.njk" import renderPartial -%}
+{%- from "blocks.njk" import renderBlock -%}
+
 <!doctype html>
 <html lang="en">
 
@@ -19,6 +22,7 @@
 </head>
 
 <body>
+
     {% block content %}
     {% endblock %}
 

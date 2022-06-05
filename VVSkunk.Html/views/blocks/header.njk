@@ -9,7 +9,11 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-
+            {{ renderPartial('navItem', { title: 'Item 1' }) }}
+            {{ renderPartial('navItem', { title: 'Item 2' }) }}
+            {{ renderPartial('navItem', { title: 'Item 3' }) }}
+            {{ renderPartial('navItem', { title: 'Item 4' }) }}
+            {{ renderPartial('navItem', { title: 'Item 5' }) }}
         </ul>
         <form class="form-inline md-form form-sm mt-0">
             <i class="fas fa-search" aria-hidden="true"></i>
