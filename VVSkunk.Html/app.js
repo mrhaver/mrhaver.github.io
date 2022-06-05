@@ -5,7 +5,7 @@ var app = express();
 app.use(express.static('/public'));
 
 // Apply nunjucks and add custom filter and function (for example). 
-nunjucks.configure(['views/'], { // set folders with templates
+nunjucks.configure(['views/', 'views/pages', 'views/blocks', 'views/partials'], { // set folders with templates
     autoescape: true,
     express: app
 });
