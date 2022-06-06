@@ -4,9 +4,10 @@ const path = require('path');
 
 var app = express();
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'assets')));
 
 // Apply nunjucks and add custom filter and function (for example). 
-nunjucks.configure(['views/', 'views/pages', 'views/blocks', 'views/partials', 'macros'], { // set folders with templates
+nunjucks.configure(['src/html/', 'src/html/pages', 'src/html/blocks', 'src/html/partials', 'src/macros'], { // set folders with templates
     autoescape: true,
     express: app
 });
