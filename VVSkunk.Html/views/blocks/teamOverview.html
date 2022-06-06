@@ -1,0 +1,18 @@
+{%- from "partials.njk" import renderPartial -%}
+
+<section class="block bg-light">
+    <div class="container">
+        <h1 class="pb-3">Team</h1>
+        <div class="row">
+            {{ renderPartial('teamMemberCard', { title: 'Dit is een van de laatste nieuws items' }) }}
+            {{ renderPartial('teamMemberCard', { title: 'Item 2' }) }}
+            {{ renderPartial('teamMemberCard', { title: 'Item 3' }) }}
+            {{ renderPartial('teamMemberCard', { title: 'Dit is een van de laatste nieuws items' }) }}
+            {{ renderPartial('teamMemberCard', { title: 'Item 2' }) }}
+            {{ renderPartial('teamMemberCard', { title: 'Item 3' }) }}
+            {{ renderPartial('teamMemberCard', { title: 'Dit is een van de laatste nieuws items' }) }}
+            {{ renderPartial('teamMemberCard', { title: 'Item 2' }) }}
+            {{ renderPartial('teamMemberCard', { title: 'Item 3' }) }}
+        </div>
+    </div>
+</section>
