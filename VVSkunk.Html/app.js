@@ -12,7 +12,7 @@ nunjucks.configure(['views/', 'views/pages', 'views/blocks', 'views/partials', '
 });
 
 app.get('/', function (req, res) {
-    res.render('index.html');
+    res.render('table-of-contents.html');
 });
 
 app.get('/pages/:viewName', function (req, res) {
