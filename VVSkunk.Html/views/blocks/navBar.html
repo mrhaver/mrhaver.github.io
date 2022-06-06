@@ -9,8 +9,8 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+    <div class="collapse navbar-collapse text-sm-center" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-lg-auto">
             {{ renderPartial('navItem', { title: 'Item 1' }) }}
             {{ renderPartial('navItem', { title: 'Item 2' }) }}
             {{ renderPartial('navItem', { title: 'Item 3' }) }}
@@ -18,10 +18,10 @@
             {{ renderPartial('navItem', { title: 'Item 5' }) }}
         </ul>
 
-        <button type="button" class="btn btn-primary m-1">CTA 1</button>
-        <button type="button" class="btn btn-primary m-1">CTA 2</button>
+        <button type="button" class="btn btn-primary m-1 d-sm-none d-lg-block">CTA 1</button>
+        <button type="button" class="btn btn-primary m-1 d-sm-none d-lg-block">CTA 2</button>
 
-        <form class="form-inline md-form form-sm mt-0 m-1">
+        <form class="form-inline md-form form-sm mt-0 m-1 d-flex justify-content-center">
             <i class="fas fa-search" aria-hidden="true"></i>
             <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Zoeken" aria-label="Search">
         </form>
