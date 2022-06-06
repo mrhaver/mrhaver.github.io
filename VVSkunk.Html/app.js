@@ -12,13 +12,13 @@ nunjucks.configure(['views/', 'views/pages', 'views/blocks', 'views/partials', '
 });
 
 app.get('/', function (req, res) {
-    res.render('index.njk');
+    res.render('index.html');
 });
 
 app.get('/pages/:viewName', function (req, res) {
     let viewName = req.params.viewName;
 
-    res.render(viewName + '.njk');
+    res.render(viewName + '.html');
 });
 
 app.listen(3000, function () {

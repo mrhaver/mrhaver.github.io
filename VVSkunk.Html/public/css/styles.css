@@ -42,6 +42,7 @@
 
 /* END VIDEO */
 
+/* START BLOCKS SECTION */
 section.block {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -53,3 +54,23 @@ section.block {
         padding-bottom: 1rem;
     }
 }
+
+/* END BLOCKS SECTION */
+
+/* START FONT AWESOME OVERRIDE */
+
+.fa-brands {
+    font-size: xx-large;
+    margin: 16px;
+}
+
+/* END FONT AWESOME OVERRIDE */
+
+/* START OTHER */
+
+
+img.bg-gradient {
+    opacity: 0.8;
+}
+
+/* END OTHER */
