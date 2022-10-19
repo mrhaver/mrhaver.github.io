@@ -4,4 +4,9 @@ button.dark-blue {
 	background-color: $dark-blue;
 	border-color: $dark-blue;
 	color: $white;
+
+	&:hover {
+		background-color: $extra-dark-blue;
+		border-color: $extra-dark-blue;
+	}
 }
