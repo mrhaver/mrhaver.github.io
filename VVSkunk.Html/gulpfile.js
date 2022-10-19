@@ -36,8 +36,8 @@ function html() {
 
 function watchFiles() {
 	watch("src/html/**/*", html);
+	watch("src/sass/**/*", buildStyles);
 }
 
-exports.build = series(clean, html, buildStyles, jsCompress, moveFiles);
+exports.build = series(clean, html, buildStyles, jsCompress, moveFiles, watchFiles);
 exports.default = series(clean, html, watchFiles);
-exports.watch = series(watchFiles);

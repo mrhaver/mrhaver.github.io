@@ -4,7 +4,8 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"serve": "gulp build && serve dist",
+		"serve": "serve dist",
+		"watch": "gulp watch",
 		"build": "gulp build"
 	},
 	"author": "",

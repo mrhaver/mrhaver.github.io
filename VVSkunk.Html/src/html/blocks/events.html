@@ -1,23 +1,19 @@
 {%- from "partials.njk" import renderPartial -%}
 
-<section class="block bg-light">
-    <div class="container">
-        <div class="text-center">
-            <h1 class="pb-3">Evenementen</h1>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-12">
-                {{ renderPartial('highlightEvent', { title: 'Highlighted event' }) }}
-            </div>
-            <div class="col-md-6 col-12">
-                {{ renderPartial('event', { title: 'Gewoon event' }) }}
-                {{ renderPartial('event', { title: 'Gewoon event' }) }}
-                {{ renderPartial('event', { title: 'Gewoon event' }) }}
-                {{ renderPartial('event', { title: 'Gewoon event' }) }}
-            </div>
-        </div>
-        <div class="text-center">
-            <button class="btn btn-primary mt-3">Meer evenementen</button>
-        </div>
-    </div>
+<section class="block bg-extra-light-grey">
+	<div class="container">
+		<div class="text-center">
+			<h1 class="pb-3">Evenementen</h1>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-12">{{ renderPartial('highlightEvent', { title: 'Highlighted event' }) }}</div>
+			<div class="col-md-6 col-12">
+				{{ renderPartial('event', { title: 'Gewoon event' }) }} 
+				{{ renderPartial('event', { title: 'Gewoon event' }) }} 
+				{{ renderPartial('event', { title: 'Gewoon event' }) }} 
+				{{ renderPartial('event', { title: 'Gewoon event' }) }}
+			</div>
+		</div>
+		<div class="text-center">{{ renderPartial('button', {title: 'Meer evenementen'}) }}</div>
+	</div>
 </section>

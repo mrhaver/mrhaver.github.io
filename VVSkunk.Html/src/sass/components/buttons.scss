@@ -1,0 +1,7 @@
+@import "../abstracts/variables.scss";
+
+button.dark-blue {
+	background-color: $dark-blue;
+	border-color: $dark-blue;
+	color: $white;
+}
