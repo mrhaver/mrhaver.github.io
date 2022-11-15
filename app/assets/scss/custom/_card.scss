@@ -1,0 +1,51 @@
+//
+// Card sizes
+//
+
+.card-xs {
+    .card-body {
+        padding: ($spacer / 3.4) ($spacer / 2);
+    }
+    .card-header,
+    .card-footer {
+        padding: 1rem ($spacer / 2);
+    }
+}
+
+.card-sm {
+    .card-body {
+        padding: $spacer / 2;
+    }
+    .card-header,
+    .card-footer {
+        padding: 1rem ($spacer / 2);
+    }
+}
+
+@include media-breakpoint-up(lg) {
+
+    .card-lg {
+        .card-body {
+            padding: $spacer * 2;
+        }
+        .card-header,
+        .card-footer {
+            padding: 1rem ($spacer * 2);
+        }
+    }
+
+}
+
+@include media-breakpoint-up(xl) {
+
+    .card-xl {
+        .card-body {
+            padding: $spacer * 2.8;
+        }
+        .card-header,
+        .card-footer {
+            padding: 2rem ($spacer * 2.8);
+        }
+    }
+
+}

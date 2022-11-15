@@ -1,0 +1,30 @@
+extends include/templates/layout
+
+append css
+
+append content
+
+    +PageHeader("Contact Us", "Pages")
+
+    = "\n"
+
+    // Contact Us
+    section.module
+        .container
+
+            .row
+                .col-md-6
+                    h5 Central office
+                    p Map where your photos were taken and where your photos were taken and discover discover local points of interest.
+                    hr
+                    .maps-container.map-widget.m-b-25
+                        .map(data-addresses="[48.859822, 2.352647]" data-info="[Lorem ipsum dolor amet.]" data-icon="assets/images/map-icon.png" data-zoom="15" data-street-view="1")
+                .col-md-6
+                    h5 Local office
+                    p Map where your photos were taken and where your photos were taken and discover discover local points of interest.
+                    hr
+                    .maps-container.map-widget.m-b-25
+                        .map(data-addresses="[48.8578708, 2.3587219]" data-info="[Lorem ipsum dolor amet.]" data-icon="assets/images/map-icon.png" data-zoom="15" data-street-view="1")
+
+
+

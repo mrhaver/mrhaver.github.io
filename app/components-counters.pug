@@ -1,0 +1,125 @@
+extends include/templates/layout
+
+append css
+
+append content
+
+    +PageHeader("Counters", "Elements")
+
+    = "\n"
+
+    // Counters
+    section.module
+        .container
+
+            .row
+                .col-md-3
+                    +Counter("Happy Clients", "1538")
+                .col-md-3
+                    +Counter("Total downloads", "2124")
+                .col-md-3
+                    +Counter("Awards Won", "3128")
+                .col-md-3
+                    +Counter("Theme Users", "9534")
+    // Counters end
+
+    = "\n"
+
+    // Counters
+    section.module.divider-top
+        .container
+
+            .row
+                .col-md-3
+                    +Counter("Happy Clients", "1538", "icon-energy icons")
+                .col-md-3
+                    +Counter("Total downloads", "2124", "icon-mustache icons")
+                .col-md-3
+                    +Counter("Awards Won", "3128", "icon-fire icons")
+                .col-md-3
+                    +Counter("Theme Users", "9534", "icon-diamond icons")
+    // Counters end
+
+    = "\n"
+
+    // Counters
+    section.module.parallax(data-background="assets/images/module-1.jpg" data-overlay="0.5")
+        .container
+
+            .row
+                .col-md-3
+                    +Counter("Happy Clients", "1538", "icon-energy icons")
+                .col-md-3
+                    +Counter("Total downloads", "2124", "icon-mustache icons")
+                .col-md-3
+                    +Counter("Awards Won", "3128", "icon-fire icons")
+                .col-md-3
+                    +Counter("Theme Users", "9534", "icon-diamond icons")
+    // Counters end
+
+    = "\n"
+
+    // Counters
+    section.module
+        .container
+
+            .row
+                .col-md-12
+                    ul.nav.nav-tabs
+                        li.nav-item: a.nav-link.active(data-toggle='tab' href='#tab-1-1'): h6 HTML
+                        li.nav-item: a.nav-link(data-toggle='tab' href='#tab-1-2'): h6 PUG
+                    .tab-content
+                        #tab-1-1.tab-pane.show.active
+                            pre
+                                code.language-markup
+                                    |&lt;div class=&quot;row&quot;&gt;
+                                    |    &lt;div class=&quot;col-md-3&quot;&gt;
+                                    |        &lt;div class=&quot;counter&quot;&gt;
+                                    |            &lt;div class=&quot;counter-icon&quot;&gt;&lt;span class=&quot;icon-energy icons&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+                                    |            &lt;div class=&quot;counter-number&quot;&gt;
+                                    |                &lt;h6&gt;&lt;strong class=&quot;counter-timer&quot; data-from=&quot;0&quot; data-to=&quot;1538&quot;&gt;0&lt;/strong&gt;&lt;/h6&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;counter-title&quot;&gt;Happy Clients&lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |    &lt;div class=&quot;col-md-3&quot;&gt;
+                                    |        &lt;div class=&quot;counter&quot;&gt;
+                                    |            &lt;div class=&quot;counter-icon&quot;&gt;&lt;span class=&quot;icon-mustache icons&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+                                    |            &lt;div class=&quot;counter-number&quot;&gt;
+                                    |                &lt;h6&gt;&lt;strong class=&quot;counter-timer&quot; data-from=&quot;0&quot; data-to=&quot;2124&quot;&gt;0&lt;/strong&gt;&lt;/h6&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;counter-title&quot;&gt;Total downloads&lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |    &lt;div class=&quot;col-md-3&quot;&gt;
+                                    |        &lt;div class=&quot;counter&quot;&gt;
+                                    |            &lt;div class=&quot;counter-icon&quot;&gt;&lt;span class=&quot;icon-fire icons&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+                                    |            &lt;div class=&quot;counter-number&quot;&gt;
+                                    |                &lt;h6&gt;&lt;strong class=&quot;counter-timer&quot; data-from=&quot;0&quot; data-to=&quot;3128&quot;&gt;0&lt;/strong&gt;&lt;/h6&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;counter-title&quot;&gt;Awards Won&lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |    &lt;div class=&quot;col-md-3&quot;&gt;
+                                    |        &lt;div class=&quot;counter&quot;&gt;
+                                    |            &lt;div class=&quot;counter-icon&quot;&gt;&lt;span class=&quot;icon-diamond icons&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+                                    |            &lt;div class=&quot;counter-number&quot;&gt;
+                                    |                &lt;h6&gt;&lt;strong class=&quot;counter-timer&quot; data-from=&quot;0&quot; data-to=&quot;9534&quot;&gt;0&lt;/strong&gt;&lt;/h6&gt;
+                                    |            &lt;/div&gt;
+                                    |            &lt;div class=&quot;counter-title&quot;&gt;Theme Users&lt;/div&gt;
+                                    |        &lt;/div&gt;
+                                    |    &lt;/div&gt;
+                                    |&lt;/div&gt;
+                        #tab-1-2.tab-pane
+                            pre
+                                code.language-pug
+                                    |.row
+                                    |    .col-md-3
+                                    |        +Counter("Happy Clients", "1538", "icon-energy icons")
+                                    |    .col-md-3
+                                    |        +Counter("Total downloads", "2124", "icon-mustache icons")
+                                    |    .col-md-3
+                                    |        +Counter("Awards Won", "3128", "icon-fire icons")
+                                    |    .col-md-3
+                                    |        +Counter("Theme Users", "9534", "icon-diamond icons")
+    // Counters end

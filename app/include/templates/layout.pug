@@ -1,0 +1,109 @@
+include ../mixins/mixins
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="description" content="")
+        meta(name="author" content="")
+
+        title Boomerang - Template
+
+        block vars
+
+        block css
+            // Favicons
+            link(rel="shortcut icon" href="assets/images/favicon.png")
+            link(rel="apple-touch-icon" href="assets/images/apple-touch-icon.png")
+            link(rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-touch-icon-72x72.png")
+            link(rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-touch-icon-114x114.png")
+
+            // Web Fonts
+            link(href="https://fonts.googleapis.com/css?family=Poppins:400,500,600%7cPlayfair+Display:400i" rel="stylesheet")
+            link(href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet")
+
+            // Plugins
+            link(href="assets/css/plugins.min.css" rel="stylesheet")
+
+            // Template core CSS
+            link(href="assets/css/template.css" rel="stylesheet")
+
+    body
+
+        = "\n"
+
+        // Preloader
+        .page-loader
+            .page-loader-inner
+                .spinner
+                    .double-bounce1
+                    .double-bounce2
+        // Preloader end
+
+        = "\n"
+
+        if ( header_transparent == true )
+            - var header_classes = "header-transparent"
+
+        // Header
+        header.header(class=header_classes)
+            .container-fluid
+
+                // Brand
+                .inner-header
+                    a.inner-brand(href="index.html")
+                        |Boomerang
+
+                // Navigation
+                .inner-navigation.collapse
+                    if ( header_one_page !== true )
+                        include navigation/navigation
+                    else
+                        include navigation/navigation-single
+
+                .extra-nav
+                    ul
+                        if ( header_one_page !== true )
+                            li
+                                a(href="shop-cart-1.html" class="top-bar-cart")
+                                    span.menu-item-span #[i.ti-shopping-cart]
+                                        span 3
+                        li
+                            a(href="#" class="off-canvas-open")
+                                span.menu-item-span #[i.ti-menu]
+
+                        //- Do not remove this item (mobile menu toggle)
+                        li.nav-toggle
+                            a(href="#" data-toggle="collapse" data-target=".inner-navigation")
+                                span.menu-item-span #[i.ti-menu]
+        // Header end
+
+        = "\n"
+
+        // Wrapper
+        .wrapper
+
+            block content
+
+            = "\n"
+
+            include footer
+
+        // Wrapper end
+
+        include off-canvas
+
+        = "\n"
+
+        // To top button
+        a(href="#top" class="scroll-top"): i.fas.fa-angle-up
+
+        = "\n"
+
+        // Scripts
+        script(src="assets/js/custom/jquery.min.js")
+        script(src="assets/js/custom/popper.min.js")
+        script(src="assets/js/bootstrap/bootstrap.min.js")
+        script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0rANX07hh6ASNKdBr4mZH0KZSqbHYc3Q")
+        script(src="assets/js/custom/plugins.min.js")
+        script(src="assets/js/custom/custom.min.js")
